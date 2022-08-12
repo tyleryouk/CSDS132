@@ -1,0 +1,16 @@
+/**
+ * Auto Generated Java Class.
+ */
+
+import javax.swing.JFrame;
+
+public class StringArgs {
+  
+  public static void main(String args[]){
+    JFrame j1 = new JFrame();
+    j1.setVisible(true);
+    j1.setSize(300,300);
+    
+  }
+  
+}
