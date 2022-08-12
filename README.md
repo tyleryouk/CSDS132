@@ -1,4 +1,4 @@
-Introduction to Programming in Java: Lab 3
+Lab 3
 Creating Classes
 In this lab you will do your first Java programming by creating an new class with methods.
 
