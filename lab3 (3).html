@@ -1,0 +1,401 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+
+
+
+<title>CSDS 132: Introduction to Programming in Java - Lab 3
+</title>
+<style type="text/css">
+h1 {text-align: center}
+</style>
+
+
+</head><body>
+<h1>Introduction to Programming in Java: Lab 3
+<br>
+Creating Classes</h1>
+
+<p>In this lab you will do your first Java programming by creating an new class with
+methods.</p>
+
+<p> <strong>If you did not join the recitation, you need to complete the first 6 tasks (including task 6). </strong> </p>
+
+<h2> Task 1.  Assigning Lab Partners</h2>
+
+<p>The first thing that will occur in this lab is the assigning of lab partners.
+The teaching assistants in the recitation will pair you with another student.</p>
+
+<hr>
+
+<h2>Rules For The Lab</h2>
+
+<blockquote>
+<p><strong>Your grade will be determined by how well you work as a member of a team.</strong>
+You will play two different roles in the lab.  You will either be the
+<em>driver</em> or <em>navigator</em>.
+<ul>
+<li><strong>driver:</strong> The person typing at the keyboard.</li>
+<li><strong>navigator:</strong> The person watching for mistakes, making suggestions,
+                      and thinking ahead.</li>
+</ul>
+
+<em><strong>Important: The driver is the only one who may do the typing. The navigator must not jump in and
+start editing.</strong></em>
+</p>
+
+<p>Choose one of you to begin as the driver.  The other will be the navigator, and the lab will tell you
+when to switch roles.</p>
+
+<p><em>You do not have to complete all the tasks
+by the end of lab</em>, but you do have to make a good effort.<br>
+<strong>The only ways to lose points when working as a team is 1) you do not show up on time,
+2) you goof off,
+3) you are the navigator and you take over editing the document from the driver, or
+4) you sit quietly as the navigator and never offer suggestions.</strong>
+</p>
+</blockquote>
+
+<p><strong>If you are unable to attend the recitation</strong> then you must do this lab exercise on your own.
+In that case, your grade will be the percent of the exercises you complete.</p>
+
+<hr>
+
+<h3>Completing the Lab</h3>
+
+<p>This lab is different from the previous two in that you will not be writing a report.  Instead, you will design a Java class and submit your design at the
+end of lab.</p>
+
+<p>To make the shared coding easier as a remote team, you should use your Google drive or Google docs.  The person
+who is the first driver should launch DrJava and share their screen.  Then you can either:
+<ol>
+<li>Create a shared Google doc, then when you need to switch roles, the driver copies the code from DrJava to the Google doc, and the new driver copies it into their DrJava and then the new driver shares their screen.</li>
+<li>The current driver saves the .java file to their Google drive, and shares that file.  Then the new driver can download that file, open it with DrJava, and share their screen.</li>
+</ol>
+</p>
+
+<hr>
+
+<h2> Task 2. Introduce Yourself to Your Lab Partner and Start DrJava </h2>
+
+<p>Introduce yourself to your lab partner.  Tell your lab partner your name as well as whether you have any pets at home, and if so what kind.</p>
+
+<hr>
+
+<h2> Task 3.  Creating a Class That is a Subclass of JFrame </h2>
+
+<p><strong>Create a subclass of <tt>JFrame</tt> called <tt>MaxWindow</tt>. Include a comment at the top of the file with your
+and your lab partner's names.</strong>  If you remember how to do this, create the class now
+and skip to Task 4.  If not, keep reading for the necessary steps.</p>
+
+<ol><li><p>
+  You will type the code into the upper right
+  window of DrJava (the text editor).  The left hand window lists all the files you have
+  open and highlights the file you are currently editing. In Java, every public
+	class is placed in its own file so be certain to start typing your 
+	code into a new file and not into a file that already contains other data.</p></li>
+
+<li><p>The first step to create the class is to place a <em>comment</em> at the top of the file that
+contains your name and your lab partner's name.  There are two types of comments.  Single line comments
+begin with <tt>//</tt>:
+<pre>
+            // This is a comment.  The entire comment must be on this line.
+</pre>
+Multiline comments are bracketed by <tt>/*</tt> and <tt>*/</tt>:
+<pre>
+	/* This is a multiline comment.
+           The comment continues for as many lines as you want
+           until the closing star-slash is encountered.
+        */
+</pre>
+Write a multiline comment with your names at the top of the file.
+</p></li>
+  
+  <li><p>To create the subclass, the code for your class should go below the comment, and it will start with
+  </p><pre>        public class MaxWindow extends JFrame { </pre>
+
+  <p>Be certain to add the line
+  </p><pre>         import javax.swing.JFrame;
+  </pre>
+  to the top of your file, <em>above</em> the class definition so you can use the <tt>JFrame</tt> class, but below the comment
+with your name.  
+  </p></li>
+  
+  <li></p>Add a closing curly brace <tt>}</tt> to the end of your file, and save the
+  file as <tt>MaxWindow.java</tt>.</p>
+  
+  <p><strong>Important:</strong> In Java, every public class must go into a file with the same name as the
+class and ending with <tt>.java</tt>.  You should also start your class name with a capital letter.  This 
+is not required in Java, but it is the style that has become the industry standard.</p></li>
+  
+  <li><p>Now compile your code by selecting <em>Compile</em>.  If the code has no mistakes,
+  move on to the next step.  If it does, fix the errors, save, and recompile before continuing.</p></li></ol></p>
+  
+<hr>
+
+<h2> Task 4.  Creating Two Methods to Move the Window </h2>
+
+<p>Create the following two methods and place a comment above each method.</p>
+<ol><li>
+<p><strong>Write a <tt>void</tt> method (with a comment above it) called
+    <tt>snapToTop</tt> that moves the window to the top of the
+    screen, but does not change it's horizontal location.</strong> If you remember how to do this, do so and move to the next method, if you do
+not, here are
+futher instructions.</p><p>  The method should begin:
+    <pre>public void snapToTop() {</pre>
+  Each method definition in a class
+  goes between the opening curly brace <tt>{</tt> and the close curly brace <tt>}</tt> of the
+  class definition.  The code should be indented.  <em>The code you write inside { } should also be indented and aligned so that
+each statement inside a compound statement starts on the same column.</em></p>
+
+    <p>You will need to call some methods that your class inherits from <tt>JFrame</tt> (<tt>setLocation</tt>, <tt>getX</tt>, <tt>getY</tt>).  You used these
+    methods in the last lab.  You can look at that lab for a hint.</p>
+
+    <p><strong>Hint:</strong> Recall that the syntax for a method call is
+       </p><pre><em>object-reference</em>.<em>methodname</em>(<em>argument list</em>)</pre>
+    Your <tt>snapToTop</tt> method will be run for a specific window (object), and you need to
+    be able to call that window's methods from inside <tt>snapToTop</tt>.  Java provides a 
+    reference called <tt>this</tt> that is used inside a method to get the reference of the object
+    running that method.  So, to get the current horizontal location of your window, from inside <tt>snapToTop</tt>,
+    use <tt>this.getX()</tt>.  <strong>Further Hint:</strong> you can drop the <tt>this.</tt>
+    from the method call and just use <tt>getX()</tt> because if you do not provide a dot
+    operator, Java automatically prefixes <tt>this.</tt> to the front of the method call.
+    
+    <p>Once you complete the method, save your code and compile it.  If it has no errors, test
+    your code: create a new <tt>MaxWindow</tt> in the Interactions pane, move that window
+    to somewhere other than the top, and call the <tt>snapToTop</tt>
+    method.  If correct, the window should now jump to the top of the screen
+    without changing in size or moving left or right.</p>
+    
+    <p>Place a comment above your method explaining what the method does.  You should indent your comment
+    so that it starts in the same column as the method. </p>
+</li>
+<li>
+    <p> <strong>Create a method <tt>snapToLeft</tt> that moves the window to the left edge of the screen without changing
+    its vertical location or its size, and put a comment above it.</strong>  The technique is almost exactly the same as the <tt>snapToTop</tt> method.</p>
+
+    <p>Please note, your new method goes inside the { } of <tt>maxWindow</tt> so it can be part of the class, but it goes
+       outside the { } of <tt>snapToTop</tt> because the new method is a separate method.
+    <em>Leave a blank line between the closing } of one method and the start of the next method.</em></p>
+
+    <p><em>Special note for Mac's.  Apple will not let the the methods you are calling cause the window to 
+cover the Apple Dock (menu of icons).  If you have the Dock on the left side of the screen, your window will not move
+all the way to the left edge.  As long as it is as close as possible to the Dock, your method is working correctly.</em></p>
+
+    <p>Place a comment above your method explaining what the method does.  You should indent your comment
+    so that it starts in the same column as the method. </p>
+</li></ol>
+
+  <p><em>Demonstrate your class to your lab teaching assistant.</em></p>
+
+<hr>
+
+<h2> Task 5. A Short Pause in Coding: Getting The Screen Size</h2>
+
+<p><strong>Switch roles.  The driver should now navigate and the navigator should now drive.</strong>  The driver should
+send their code to the navigator, either by saving the java file to their Google drive and sharing it, or by copying the code
+of the Java file to a shared Google doc.  Then the new driver can launch DrJava and either load the shared file or copy in the shared code.  Then change so the new driver is now sharing their screen.</p>
+
+
+<p> In last week's lab, you had to move a window to the edge of the screen.  This was challenging because you probably did not know the 
+screen size of your monitor.  Java has pre-defined classes that can provide you with the screen size.  You will use them in this lab to
+help you with your tasks.</p>
+
+<p> <tt>Toolkit</tt> is a pre-defined class that is used to manipulate the computer's desktop.  One of the useful methods of 
+<tt>Toolkit</tt> is <tt>getScreenSize</tt> which returns an object of type <tt>Dimension</tt>.  <tt>Dimension</tt> represents a 2-dimensional coordinate.</p>
+
+<p>Before you code with these classes, you should practice using them.  Type the following code into the Interactions pane <em>(not in the editor)</em>.
+Of course, before you can use the classes, you have to import them!
+<pre>
+import java.awt.Dimension;
+import java.awt.Toolkit;
+</pre>
+Now you can use these classes:
+<pre>
+Toolkit kit = Toolkit.getDefaultToolkit();
+Dimension d = kit.getScreenSize();
+</pre>
+The first line calls a method of the <tt>Toolkit</tt> <em>class</em> that creates and returns a <tt>Toolkit</tt> object of the proper <em>type</em> for your system,
+and this object (or really its location in memory) is stored in the variable called <tt>kit</tt>.
+The second line calls the <tt>getScreenSize</tt> method of <tt>Toolkit</tt> on the <tt>Toolkit</tt> object and stores the reference to the returned <tt>Dimension</tt>
+in a variable called <tt>d</tt>.</p>
+<p>
+Now you can access the values of the <tt>Dimension</tt> through either its methods or its fields.  Type the following into the interactions pane.  
+Remember to omit the semicolons so that you can see the values of these expressions.
+<pre>
+d.getWidth()
+d.getHeight()
+d.width
+d.height
+</pre>
+So, you can use either the methods or the fields of <tt>Dimension</tt> to get the screen size.  Note that the methods have a return type of <tt>double</tt> while
+the type of the fields is <tt>int</tt>.  It does not matter which you use, but depending on what you decide you may need to use a typecast.</p>
+    
+<hr>
+
+<h2> Task 6.  Creating Methods that Use the Screen Size </h2>
+
+<ol><li>
+<p><strong>Add a <tt>void</tt> method to the <tt>MaxWindow</tt> class called
+    <tt>maximizeHeight</tt>.  The method will move the window to the top of the
+    screen and make it as tall as the screen.</strong></p><p>  The method should begin:
+    <pre>public void maximizeHeight() {</pre>
+    </p>
+
+   <p>Your method will need to use the <tt>Toolkit</tt> and <tt>Dimension</tt> classes described above.
+  First, you need to import the classes
+  <pre>  
+         import java.awt.Dimension;
+         import java.awt.Toolkit;
+  </pre> 
+    Now, you will add
+    code from above to your method to get the screen height and width.  Note, you do not
+    add <em>all</em> the code you typed into the Interactions pane, just what is needed to
+    get the required screen dimension.</p>
+    
+    <p>Save your code, compile it, and fix any errors.  Test your code in the interactions pane.
+    Create a <tt>MaxWindow</tt> instance and move it
+    to somewhere other than the upper left corner. Call the <tt>maximizeHeight</tt>
+    method, and if correct, the window should now stretch from the top to the bottom of the screen
+    without changing in width or moving left or right.</p>
+    
+    <p>Place a comment above your method explaining what the method does.  You should indent your comment
+    so that it starts in the same column as the method. </p>
+</li>
+
+<li><strong>Add the <tt>void</tt> method <tt>maximizeWidth</tt> to the class that
+    moves the window to the left of the screen and makes it as wide as
+    the screen.</strong>  Save, compile, and test your class.</p></li>
+</ol>
+    
+  <p><em>Demonstrate your class to your lab teaching assistant.</em></p>
+<hr>
+
+<h2>Task 7. Instance Fields and Conditional Statements</h2>
+
+<p><strong>Switch roles.  The driver should now navigate and the navigator should now drive.</strong></p>
+
+<p>We are now going to change the <tt>maximizeHeight</tt> and <tt>maximizeWidth</tt> methods.  So that they can
+both maximize and restore the window sizes.</p>
+
+<ol><li><p>Create two fields inside the <tt>MaxWindow</tt> class.  A field goes inside the class body but not inside any
+methods.  The first field should be type <tt>boolean</tt> and given the name <tt>heightMaximized</tt>.
+The second field should be type <tt>int</tt> and given the name <tt>originalHeight</tt>.
+Just as with methods, fields need access modifiers, but unlike methods, we like to make fields <tt>private</tt>.
+Give <tt>heightMaximized</tt> the initial value of <tt>false</tt> and <tt>originalHeight</tt> the initial value of 0.</p></li>
+
+<li><p>Change the <tt>maximizeHeight</tt>  method so that it accepts a single boolean as input.
+You do this by creating a variable declaration for the input value inside the <tt>( )</tt> of the method header.</p></li>
+
+<li><p>Save, compile your code, and test to see if you must now use boolean values when calling <tt>maximizeHeight</tt>.
+There should be no other differences.  If there are any errors, fix them before moving on.</p></li>
+
+<li>In the body of the <tt>maximizeHeight</tt> method, create a conditional statement.  A conditional statement is of the form:
+<pre>
+     if (condition)
+        then-statement
+     else
+        else-statement
+</pre>
+In this case, our <em>then-statement</em> will be a compound statement containing several simple statements.
+Our <em>else-statement</em> will be another conditional statement.  That second conditional statement will have a 
+<em>then-statement</em> that is a compound statement with several simple statements and no <em>else-statement</em>.
+The form looks like this:
+<pre>
+	if (condition1) {
+	   statement1;
+	   statement2;
+	   statement3;     (Note there could be more than 3 statements here)
+	} 
+	else if (condition2) {
+	   statement4;
+	   statement5;
+	}
+</pre>
+</p></li>
+<li><p>The first condition should check if the input to <tt>maximizeHeight</tt> is true <em>and</em> the <tt>heightMaximized</tt> field is false.</p></li>
+<li><p>The simple statements inside the <tt>then-statement</tt> compound statement should do the following:
+<ol><li>Store the current height of the window to the field <tt>originalHeight</tt>.</li>
+    <li>Do the code to maximize the window and move it to the top of the screen. (The code should be moved here so that this is 
+the only place the code exists inside the method.)</li>
+    <li>Set the <tt>heightMaximized</tt> field to store <tt>true</tt>.</li></ol></p></li>
+<li><p>The second condition should check if the input to <tt>maximizeHeight</tt> is false <em>and</em> the
+<tt>heightMaximized</tt> field is true.</p></li>
+<li><p>The second compound statement should contain simple statements to do the following:
+<ol><li>Set the window height to be the value stored in the <tt>originalHeight</tt> field while keeping the width the same.</li>
+    <li>Set the <tt>heightMaximized</tt> field to store <tt>false</tt>.</ol></p></li>
+<li><p>Compile and test your code.  The window's height should be maximized when you call <tt>maximizeHeight(true)</tt> and
+it should be restored when you call <tt>maximizeHeight(false)</tt> (though the window location will still be the top of the screen.</p></li>
+
+<p><strong>Switch roles.  The driver should now navigate and the navigator should now drive.</strong></p>
+
+<li><p>Once you have this working, make the same changes to <tt>maximizeWidth</tt>, and then <em>demonstrate your class to your lab teaching assistant</em>.</p></li>
+</ol>
+
+<hr />
+<h2>Optional Task 8. Restoring the Window Location</h2>
+
+<p>Notice that when you restore the window height or width, the heigh and width goes back to what it was before you maximized the
+window, but the window is still moved to the top or left of the screen.  Fix your code so that when you restore the height/width,
+you also restore the location so that it moves back to the location it was before you maximized it.  As a hint, the change 
+is <em>very</em> similar to what you did with the <tt>originalHeight</tt> and <tt>originalWidth</tt> fields.</p>
+
+<hr />
+
+<h2>Optional Task 9.  Constructors and Instance Fields</h2>
+
+
+<p>Each class has one or more special methods called <em>constructors</em>.  The constructor
+method is called whenever an object of the class is created by the <tt>new</tt> operator.  At the moment, your class
+does not have a constructor.  This is ok because Java uses a default constructor for any class in
+which no constructor is specified.
+The default constructor takes no arguments and (basically) does nothing.
+</p>
+
+<p> Notice that both <tt>maximizeWidth</tt> and
+<tt>maximizeHeight</tt> methods have the same code to get the screen dimensions.  Since the
+screen is unlikely to change during an execution of this code, it is not really necessary
+to have the method get the screen dimensions every time.  Instead, we can have the object
+get the screen dimensions once when it is created and then use those dimensions as needed
+in <tt>maximizeWidth</tt> and <tt>maximizeHeight</tt>.</p>
+
+<ul>
+<li><p>Create two fields in your class called <tt>screenWidth</tt> and <tt>screenHeight</tt>.
+The fields should be created inside the class but outside the methods.  Recall that a field is
+just a variable so you will use a variable declaration, but you should prefix the declaration
+with the access modifier <tt>private</tt>.</p></li>
+
+<li><p>Create a constructor method with no arguments.  The constructor method is created in
+the same fashion as other methods except that it's name is the same as the class name and it has no return type.
+</p><pre>public MaxWindow () {</pre>
+The above constructor returns a <tt>MaxWindow</tt> object and takes no parameters.</li>
+
+<li><p>In the body of the constructor method, place the <tt>Toolkit</tt> code that gets the 
+screen dimensions and store those dimensions in the <tt>screenWidth</tt> and <tt>screenHeight</tt>
+variables you created.  (This means that while the declarations for the <tt>screenWidth</tt> and <tt>screenHeight</tt>
+fields/variables are outside the constructor, the assignment statements are inside the body of the constructor method.)</p></li>
+
+<li><p>Remove the <tt>Toolkit</tt> code that retrieves the screen dimensions from 
+<tt>maximizeWidth</tt> and <tt>maximizeHeight</tt> methods, and replace the <tt>Dimension</tt>
+values in those methods with the <tt>screenWidth</tt> and <tt>screenHeight</tt> variables.</p></li>
+</ul>
+Demonstrate the constructor to your lab teaching assistant.
+
+<hr>
+
+<h2>Save and Submit Your Lab</h2>
+
+<p>Both you and your lab partner must submit  <tt>MaxWindow.java</tt>.
+If you click on the <em>Lab 3</em> hyperlink on Canvas, you will get a page allowing you to submit the lab
+and attach your <tt>MaxWindow.java</tt>.  Please do that now.</p>
+
+<p><strong>Important:</strong>  You must submit the file ending in <tt>.java</tt>.  The files ending in
+<tt>.java~</tt> are temporary files created by the DrJava editor.  These
+probably contain incomplete and older versions of your code.  The files ending in <tt>.class</tt> are created
+by the compiler and contain the conversion of your Java file into the intermediate bytecode that
+is interpreted by the Java Virtual Machine.</p>
+
+<p>While you can download your submitted copies from the Canvas site, it is a good idea to email yourself a copy
+of the file or to save it on a portable drive so you can reference the file at a later date.</p>
+
+</body></html>
